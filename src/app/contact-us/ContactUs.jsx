@@ -14,7 +14,7 @@ const ContactUs = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="bg-[#f7fafc]">
+    <div ref={sectionRef} className="bg-gradient-to-br from-[#e6f7f7] to-[#f8fffe]">
       {/* NO animation here because you already added */}
       <Contact />
 

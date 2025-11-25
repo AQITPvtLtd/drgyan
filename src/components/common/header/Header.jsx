@@ -46,14 +46,14 @@ const Header = () => {
             alt="Logo"
             width={250}
             height={100}
-            className="w-auto h-14 object-contain"
+            className="w-auto h-18 object-contain"
             data-aos="fade-right"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <nav
-          className="hidden md:flex items-center space-x-10 text-lg absolute left-1/2 transform -translate-x-1/2"
+          className="hidden md:flex items-center space-x-10 text-xl absolute left-1/2 transform -translate-x-1/2"
           style={{ fontFamily: "Roboto Slab, serif" }}
         >
           {navLinks.map((link, index) => (
@@ -101,7 +101,7 @@ const Header = () => {
               target="_blank"
               data-aos="zoom-in"
               data-aos-delay={index * 150} // 🎯 ONE BY ONE
-              className="p-2 bg-white rounded-full shadow hover:scale-110 transition-transform"
+              className="p-2 bg-white rounded-full shadow-xl hover:scale-110 transition-transform"
             >
               {item.icon}
             </Link>

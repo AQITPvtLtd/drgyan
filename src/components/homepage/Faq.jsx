@@ -32,7 +32,7 @@ export default function Faq() {
   };
 
   return (
-    <section className="lg:py-20 py-12 px-6 md:px-12 lg:px-24 mx-auto bg-white">
+    <section className="lg:py-20 py-12 px-6 md:px-20 lg:px-35 mx-auto bg-white">
       <div className="grid lg:grid-cols-2 gap-12 items-start">
 
         {/* Left Heading */}

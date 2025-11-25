@@ -67,7 +67,7 @@ export default function Services() {
     ];
 
     return (
-        <section className="w-full py-16 bg-gradient-to-br from-[#e6f7f7] to-[#f8fffe]">
+        <section className="w-full py-10 bg-gradient-to-br from-[#e6f7f7] to-[#f8fffe]">
             <div className="max-w-7xl mx-auto px-4">
 
                 <h2 className="text-center text-4xl font-bold text-black mb-12" style={{ fontFamily: "Roboto Slab, serif" }}>

@@ -17,8 +17,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <section className="py-20 px-6 md:px-12 lg:px-24 bg-[#f7fafc]">
-
+        <section className="py-10 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-[#e6f7f7] to-[#f8fffe]">
             {/* Heading */}
             <div
                 className="text-center mb-16"
@@ -51,7 +50,7 @@ const Contact = () => {
                         <FaMapMarkerAlt className="text-2xl" />
                     </div>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                        Shop No.382, Office Lobby Vegas Mall,<br />
+                        Shop No - 382,<br /> Office Lobby Vegas Mall,<br />
                         Sector 14, Dwarka,<br /> New Delhi – 110078
                     </p>
                 </Link>
@@ -87,23 +86,25 @@ const Contact = () => {
                 </Link>
 
                 {/* Box 4 */}
-                <div
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                    className="bg-white shadow-md rounded-2xl p-8 text-center hover:shadow-xl transition"
-                >
-                    <div className="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-[#e7f2fb] text-[#0769af] rounded-full">
-                        <FaClock className="text-2xl" />
+                <Link href="https://maps.app.goo.gl/UFLbkM9JhXAKRSXz9" target="_blank" className="block">
+                    <div
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                        className="bg-white shadow-md rounded-2xl p-8 text-center hover:shadow-xl transition"
+                    >
+                        <div className="w-14 h-14 mx-auto mb-5 flex items-center justify-center bg-[#e7f2fb] text-[#0769af] rounded-full">
+                            <FaClock className="text-2xl" />
+                        </div>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                            <strong>Modern Dental Clinic</strong><br />
+                            Mon - Sun<br />
+                            10:00 AM – 2:00 PM<br />
+                            5:00 PM – 8:00 PM<br />
+                            Tuesday <br />
+                            10:00 AM – 2:00 PM
+                        </p>
                     </div>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                        <strong>Modern Dental Clinic</strong><br />
-                        Mon - Sun<br />
-                        10:00 AM – 2:00 PM<br />
-                        5:00 PM – 8:00 PM<br />
-                        Tuesday <br />
-                        10:00 AM – 2:00 PM
-                    </p>
-                </div>
+                </Link>
 
             </div>
 

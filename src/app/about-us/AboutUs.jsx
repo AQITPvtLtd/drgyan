@@ -39,7 +39,7 @@ export default function AboutUs() {
 
                     {/* Text */}
                     <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-bold mb-3">Mission</h3>
+                        <h3 className="text-xl font-bold mb-3 text-black" style={{ fontFamily: "Roboto Slab, serif" }}>Mission</h3>
 
                         <p className="text-sm text-slate-700 leading-relaxed text-justify">
                             Our mission is to provide safe, gentle, and high-quality dental care
@@ -79,12 +79,12 @@ export default function AboutUs() {
 
                     {/* Text */}
                     <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-bold mb-3">Vision</h3>
+                        <h3 className="text-xl font-bold mb-3 text-black" style={{ fontFamily: "Roboto Slab, serif" }}>Vision</h3>
 
                         <p className="text-sm text-slate-700 leading-relaxed text-justify">
                             Our vision is to become the most trusted dental clinic, known for
-                            compassion, expertise, and innovation. We aim to make advanced 
-                            dentistry comfortable and accessible to everyone—creating healthier 
+                            compassion, expertise, and innovation. We aim to make advanced
+                            dentistry comfortable and accessible to everyone—creating healthier
                             smiles and raising the standard of dental care.
                         </p>
 

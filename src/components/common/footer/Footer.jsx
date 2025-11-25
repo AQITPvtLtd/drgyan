@@ -102,7 +102,7 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="mt-6 text-center text-sm font-semibold" style={{ fontFamily: "Roboto Slab, serif" }}>
-                Design & Developed By <Link href="https://tekbooster.com/" className='hover:text-gray-300' target='_blank'>Tek Booster (Digital Marketing Company)</Link>
+                <Link href="https://tekbooster.com/" className='hover:text-gray-300' target='_blank'>Design & Developed By Tek Booster (Digital Marketing Company)</Link>
             </div>
         </footer>
     );

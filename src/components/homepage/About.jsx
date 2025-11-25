@@ -63,7 +63,7 @@ export default function About() {
               {/* TEXT */}
               <div className="p-6 md:p-8 w-full md:w-1/2 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold">{d.name}</h3>
+                  <h3 className="text-xl font-semibold text-black mb-2" style={{ fontFamily: "Roboto Slab, serif" }}>{d.name}</h3>
 
                   <p
                     className="text-sm mt-1 font-semibold text-black"
