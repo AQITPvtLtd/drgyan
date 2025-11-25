@@ -82,7 +82,7 @@ export default function Banner() {
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-animate">
         <Image
-          src="/banner/banner1.png"
+          src="/banner/banner2.png"
           alt="Dentist Banner"
           fill
           className="object-cover"
@@ -96,7 +96,7 @@ export default function Banner() {
       {/* Content */}
       <div className="max-w-7xl mx-auto w-full px-6 md:px-10 text-white">
         <div ref={contentRef} className="max-w-xl">
-          <h1 className="text-4xl md:text-4xl font-extrabold leading-tight drop-shadow-xl banner-heading">
+          <h1 className="text-4xl md:text-4xl font-extrabold leading-tight drop-shadow-xl banner-heading" style={{ fontFamily: "Roboto Slab, serif" }}>
             Transforming Smiles with,
             <span className="block mt-1 text-blue-300">Precision & Care</span>
           </h1>
