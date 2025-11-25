@@ -82,7 +82,7 @@ export default function Banner() {
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-animate">
         <Image
-          src="/banner/banner1.png"
+          src="/banner/banner2.png"
           alt="Dentist Banner"
           fill
           className="object-cover"
