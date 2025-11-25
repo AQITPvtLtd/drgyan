@@ -33,12 +33,12 @@ export default function Faq() {
 
   return (
     <section className="lg:py-20 py-12 px-6 md:px-20 lg:px-35 mx-auto bg-white">
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="grid lg:grid-cols-2 gap-5 lg:gap-12 items-start">
 
         {/* Left Heading */}
         <div data-aos="fade-right">
           <h2
-            className="lg:text-5xl text-3xl font-bold text-gray-900 leading-tight"
+            className="lg:text-5xl text-3xl font-bold text-gray-900 leading-tight text-center lg:text-left"
             style={{ fontFamily: "Roboto Slab, serif" }}
           >
             Frequently Asked<br />Questions

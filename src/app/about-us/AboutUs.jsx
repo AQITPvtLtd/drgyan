@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
     return (
-        <section className="max-w-6xl mx-auto px-6 py-16">
+        <section className="max-w-6xl mx-auto px-6 py-0 lg:py-16">
             {/* Heading */}
             <h2
                 className="text-center text-3xl text-black sm:text-4xl font-semibold mb-12 tracking-wide"
@@ -18,7 +18,7 @@ export default function AboutUs() {
 
                 {/* Mission Card */}
                 <article
-                    className="relative overflow-hidden rounded-3xl bg-white/30 backdrop-blur-xl shadow-xl p-8 
+                    className="relative border border-gray-200 overflow-hidden rounded-3xl bg-white/30 backdrop-blur-xl shadow-xl p-8 
                     flex flex-col md:flex-row items-center gap-6
                     transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:bg-white/40"
                 >
@@ -58,7 +58,7 @@ export default function AboutUs() {
 
                 {/* Vision Card */}
                 <article
-                    className="relative overflow-hidden rounded-3xl bg-white/30 backdrop-blur-xl shadow-xl p-8 
+                    className="relative overflow-hidden border border-gray-200 rounded-3xl bg-white/30 backdrop-blur-xl shadow-xl p-8 
                     flex flex-col md:flex-row items-center gap-6
                     transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:bg-white/40"
                 >

@@ -15,26 +15,29 @@ export default function Banner() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // Background fade + zoom animation
-      gsap.from(".bg-animate", {
+      // Background fade + subtle zoom animation
+      gsap.from(".bg-animate > .bg-img", {
         opacity: 0,
-        scale: 1.1,
+        scale: 1.05, // thoda kam zoom — overflow kam hoga
         duration: 1.8,
         ease: "power3.out",
+        transformOrigin: "center center",
+        willChange: "transform, opacity",
         scrollTrigger: {
           trigger: bannerRef.current,
           start: "top bottom",
-          toggleActions: "restart none none reset", // repeat on scroll
+          toggleActions: "restart none none reset",
         },
       });
 
       // Heading animation
       gsap.from(".banner-heading", {
-        y: 60,
+        y: 50,
         opacity: 0,
         duration: 1.2,
         ease: "power3.out",
         delay: 0.2,
+        willChange: "transform, opacity",
         scrollTrigger: {
           trigger: bannerRef.current,
           start: "top 80%",
@@ -44,11 +47,12 @@ export default function Banner() {
 
       // Paragraph animation
       gsap.from(".banner-sub", {
-        y: 40,
+        y: 50,
         opacity: 0,
         duration: 1,
         ease: "power3.out",
         delay: 0.4,
+        willChange: "transform, opacity",
         scrollTrigger: {
           trigger: bannerRef.current,
           start: "top 80%",
@@ -58,11 +62,12 @@ export default function Banner() {
 
       // Button animation
       gsap.from(".banner-btn", {
-        y: 30,
+        y: 50,
         opacity: 0,
         duration: 1,
         ease: "power3.out",
         delay: 0.5,
+        willChange: "transform, opacity",
         scrollTrigger: {
           trigger: bannerRef.current,
           start: "top 80%",
@@ -77,32 +82,41 @@ export default function Banner() {
   return (
     <section
       ref={bannerRef}
-      className="relative mt-20 w-full h-[85vh] md:h-[90vh] flex items-center"
+      className="relative mt-20 w-full h-[85vh] md:h-[90vh] flex items-center overflow-hidden" // <-- overflow-hidden added
     >
       {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-animate">
-        <Image
-          src="/banner/banner2.png"
-          alt="Dentist Banner"
-          fill
-          className="object-cover"
-          priority
-        />
+      <div className="absolute inset-0 -z-10 bg-animate overflow-hidden"> {/* <-- overflow-hidden added */}
+        <div className="bg-img absolute inset-0"> {/* wrapper to target animation safely */}
+          <Image
+            src="/banner/ban1.png"
+            alt="Dentist Banner"
+            fill
+            className="object-cover lg:object-fill pointer-events-none select-none"
+            priority
+          />
+        </div>
 
         {/* Smooth Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-transparent pointer-events-none" />
       </div>
 
       {/* Content */}
       <div className="max-w-7xl mx-auto w-full px-6 md:px-10 text-white">
-        <div ref={contentRef} className="max-w-xl">
-          <h1 className="text-4xl md:text-4xl font-extrabold leading-tight drop-shadow-xl banner-heading" style={{ fontFamily: "Roboto Slab, serif" }}>
+        <div
+          ref={contentRef}
+          className="max-w-xl bg-black opacity-60 px-10 py-10 rounded-2xl"
+          style={{ willChange: "opacity, transform" }}
+        >
+          <h1
+            className="text-4xl md:text-4xl font-extrabold leading-tight drop-shadow-xl banner-heading"
+            style={{ fontFamily: "Roboto Slab, serif" }}
+          >
             Transforming Smiles with,
             <span className="block mt-1 text-blue-300">Precision & Care</span>
           </h1>
 
-          <p className="text-base mt-4 text-gray-200 font-light banner-sub">
-            Premium treatments with precision, expertise, and modern technology.
+          <p className="text-sm mt-4 text-gray-200 font-light banner-sub">
+            Premium treatments with precision, expertise, and modern technology. <br />
             Trusted Dentists in Delhi for painless and advanced dental treatments.
           </p>
 
