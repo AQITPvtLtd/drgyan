@@ -3,7 +3,7 @@ import ContactUs from './ContactUs'
 
 const page = () => {
   return (
-    <div className='mt-10'>
+    <div className='mt-20'>
         <ContactUs />
     </div>
   )
