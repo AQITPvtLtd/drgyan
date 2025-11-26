@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -8,16 +8,9 @@ import { usePathname } from "next/navigation";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    AOS.init({ duration: 700, once: false });
-  }, []);
 
   const navLinks = [
     { name: "HOME", path: "/" },
@@ -33,10 +26,7 @@ const Header = () => {
      hover:after:w-full after:duration-300`;
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm"
-      data-aos="fade-down"
-    >
+    <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-25 flex items-center justify-between">
 
         {/* Logo */}
@@ -47,22 +37,13 @@ const Header = () => {
             width={250}
             height={100}
             className="w-auto h-22 object-contain"
-            data-aos="fade-right"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav
-          className="hidden md:flex items-center space-x-10 text-xl absolute left-1/2 transform -translate-x-1/2"
-        >
-          {navLinks.map((link, index) => (
-            <Link
-              key={link.path}
-              href={link.path}
-              className={linkClasses(link.path)}
-              data-aos="fade-down"
-              data-aos-delay={index * 150}      // 🎯 ONE BY ONE DELAY
-            >
+        <nav className="hidden md:flex items-center space-x-10 text-xl absolute left-1/2 transform -translate-x-1/2">
+          {navLinks.map((link) => (
+            <Link key={link.path} href={link.path} className={linkClasses(link.path)}>
               {link.name}
             </Link>
           ))}
@@ -98,8 +79,6 @@ const Header = () => {
               key={index}
               href={item.link}
               target="_blank"
-              data-aos="zoom-in"
-              data-aos-delay={index * 150} // 🎯 ONE BY ONE
               className="p-2 bg-white rounded-full shadow-xl hover:scale-110 transition-transform"
             >
               {item.icon}
@@ -111,7 +90,6 @@ const Header = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-black transition-transform duration-300"
-          data-aos="fade-left"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -119,17 +97,12 @@ const Header = () => {
 
       {/* Mobile Dropdown MENU */}
       {isOpen && (
-        <div
-          className="md:hidden bg-white shadow-lg px-6 py-4 space-y-4 text-lg"
-          data-aos="fade-down"
-        >
-          {navLinks.map((link, index) => (
+        <div className="md:hidden bg-white shadow-lg px-6 py-4 space-y-4 text-lg">
+          {navLinks.map((link) => (
             <Link
               key={link.path}
               href={link.path}
               onClick={() => setIsOpen(false)}
-              data-aos="fade-right"
-              data-aos-delay={index * 150}    // 🎯 ONE BY ONE
               className="block text-gray-800 border-b pb-2 hover:text-[#0769af] transition"
             >
               {link.name}
@@ -161,13 +134,7 @@ const Header = () => {
                 link: "https://maps.app.goo.gl/UFLbkM9JhXAKRSXz9",
               },
             ].map((item, index) => (
-              <Link
-                key={index}
-                href={item.link}
-                target="_blank"
-                data-aos="zoom-in"
-                data-aos-delay={index * 150}
-              >
+              <Link key={index} href={item.link} target="_blank">
                 {item.icon}
               </Link>
             ))}

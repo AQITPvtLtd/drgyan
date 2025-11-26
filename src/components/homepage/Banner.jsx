@@ -39,14 +39,14 @@ export default function Banner() {
           className="max-w-xl bg-black opacity-60 px-10 py-10 rounded-2xl"
         >
           <h1
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-delay="300"
             className="text-4xl md:text-4xl font-extrabold leading-tight drop-shadow-xl"
             style={{ fontFamily: "Roboto Slab, serif" }}
           >
             Transforming Smiles with,
             <span
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-delay="400"
               className="block mt-1 text-blue-300"
             >
@@ -65,7 +65,7 @@ export default function Banner() {
 
           <Link href="/contact-us">
             <button
-              data-aos="zoom-in"
+              data-aos="fade-up"
               data-aos-delay="600"
               className="mt-8 bg-[#0769af] cursor-pointer hover:bg-blue-600 text-white px-8 py-4 rounded-full text-base md:text-lg font-semibold shadow-2xl transition-all duration-300"
             >
