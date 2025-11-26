@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className="max-w-sm">
                     <Link href="/">
                         <Image
-                            src='/logo/logo.png'
+                            src='/logo/footerlogo1.png'
                             width={220}
                             height={220}
                             alt='Logo'

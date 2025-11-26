@@ -37,7 +37,7 @@ const Header = () => {
       className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm"
       data-aos="fade-down"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-25 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -46,7 +46,7 @@ const Header = () => {
             alt="Logo"
             width={250}
             height={100}
-            className="w-auto h-18 object-contain"
+            className="w-auto h-22 object-contain"
             data-aos="fade-right"
           />
         </Link>
@@ -54,7 +54,6 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav
           className="hidden md:flex items-center space-x-10 text-xl absolute left-1/2 transform -translate-x-1/2"
-          style={{ fontFamily: "Roboto Slab, serif" }}
         >
           {navLinks.map((link, index) => (
             <Link
@@ -122,7 +121,6 @@ const Header = () => {
       {isOpen && (
         <div
           className="md:hidden bg-white shadow-lg px-6 py-4 space-y-4 text-lg"
-          style={{ fontFamily: "Roboto Slab, serif" }}
           data-aos="fade-down"
         >
           {navLinks.map((link, index) => (
