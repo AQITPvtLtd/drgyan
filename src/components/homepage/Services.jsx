@@ -59,6 +59,18 @@ export default function Services() {
                 "Experience painless and precise dental care with advanced laser treatments for gums, whitening, and soft tissue procedures.",
         },
         {
+            name: "Implants",
+            image: "/treatments/implants.png",
+            description:
+                "We offer safe, long-lasting dental implants that naturally replace missing teeth and restore chewing strength for a confident smile.",
+        },
+        {
+            name: "Aligners / Invisalign",
+            image: "/treatments/aligners.png",
+            description:
+                "We offer comfortable, nearly invisible aligners that gently straighten teeth, improve alignment, and boost confidence.",
+        },
+        {
             name: "Other Services",
             image: "/treatments/other.png",
             description:
